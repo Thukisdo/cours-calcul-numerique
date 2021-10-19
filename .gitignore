@@ -11,6 +11,17 @@ integration/test.pdf
 integration/vecteur1.pdf
 integration/vecteur2.pdf
 
+## IDE related
+.vscode
+
+## App output
+*.dat
+*.out
+*.data
+
+## Build output
+simulation
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

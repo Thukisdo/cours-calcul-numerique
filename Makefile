@@ -1,9 +1,16 @@
 CC=gcc
-OPTS=-g -Wall -O3 -march=native 
+OPTS=-Wall -O3 -march=native 
+
+all: simulation
+	./simulation
+	gnuplot plot-simulation.gp
 
 simulation: simulation.c
-	$(CC) $(OPTS) simulation.c -o simulation
+	$(CC) $(OPTS) simulation.c -o simulation -lm
 
-.PHONY: clean
+
 clean:
-	rm -rf *.o simulation
+	rm -f *.o simulation
+	rm -f *dat
+
+.PHONY: clean all
